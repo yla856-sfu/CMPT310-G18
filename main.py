@@ -70,7 +70,7 @@ def main():
 
                 message = "Your move:" + str(x) + "," + str(y) + "\nAI move:" + str(ai_x) + "," + str(ai_y)
 
-                if game.check_win(ai_x, ai_y, game.AI):
+                if game.check_win(ai_x, ai_y, game.PLAYER2):
                     message = "AI Won! Final round number:" + str(turn_count)
                     game_over = True
                     continue
@@ -88,7 +88,7 @@ def main():
 
                     message = "You skipped this turn; AI move:" + str(ai_x) + "," + str(ai_y)
 
-                    if game.check_win(ai_x, ai_y, game.AI):
+                    if game.check_win(ai_x, ai_y, game.PLAYER2):
                         message = "AI Won! Final round number:" + str(turn_count)
                         game_over = True
                         continue
