@@ -81,7 +81,7 @@ def draw_board(screen, font):
             if game.board[y][x] != game.EMPTY:
                 screen_x, screen_y = board_to_screen(x, y)
 
-                if game.board[y][x] == game.HUMAN:
+                if game.board[y][x] == game.PLAYER1:
                     color = (0, 0, 0)
                 else:
                     color = (255, 255, 255)
