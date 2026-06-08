@@ -1,6 +1,6 @@
 # CMPT310-G18
 
-Group Project
+Testing branch
 
 ## Run
 
