@@ -1,0 +1,233 @@
+python train_cnn.py 				# default
+
+# epoch
+python train_cnn.py --epochs 10
+python train_cnn.py --epochs 20 		# default
+python train_cnn.py --epochs 40
+
+# batch
+python train_cnn.py --batch-size 64
+python train_cnn.py --batch-size 128 		# default
+python train_cnn.py --batch-size 256
+
+# lr
+python train_cnn.py --learning-rate 5e-4
+python train_cnn.py --learning-rate 1e-3 	# default
+python train_cnn.py --learning-rate 2e-3
+
+# channel
+python train_cnn.py --channels 32
+python train_cnn.py --channels 64		# default
+python train_cnn.py --channels 128
+
+# block
+python train_cnn.py --blocks 2
+python train_cnn.py --blocks 5			# default
+python train_cnn.py --blocks 10
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+(base) PS D:\CMPT310-G18\training> python train_cnn.py
+Device: cuda
+Loading training data...
+Warning: train contains 6 invalid samples whose target square is occupied. These samples will be skipped.
+Loading test data...
+Warning: test contains 3 invalid samples whose target square is occupied. These samples will be skipped.
+Training samples: 18823
+Validation samples: 2092
+Test samples: 5454
+Trainable parameters: 373,345
+Data augmentation: enabled
+Epoch 01/20 | lr=0.001000 | train loss=2.4931 | train top1=0.3162 | val loss=2.0581 | top1=0.3877 | top3=0.6716 | top5=0.7796 | top10=0.8972
+  Saved new best model to: gomoku_cnn.pt
+Epoch 02/20 | lr=0.001000 | train loss=1.8821 | train top1=0.4368 | val loss=1.8475 | top1=0.4479 | top3=0.7146 | top5=0.8169 | top10=0.9183
+  Saved new best model to: gomoku_cnn.pt
+Epoch 03/20 | lr=0.001000 | train loss=1.7281 | train top1=0.4769 | val loss=1.7757 | top1=0.4541 | top3=0.7457 | top5=0.8427 | top10=0.9264
+  Saved new best model to: gomoku_cnn.pt
+Epoch 04/20 | lr=0.001000 | train loss=1.6241 | train top1=0.5040 | val loss=1.6503 | top1=0.4976 | top3=0.7620 | top5=0.8475 | top10=0.9379
+  Saved new best model to: gomoku_cnn.pt
+Epoch 05/20 | lr=0.001000 | train loss=1.5649 | train top1=0.5166 | val loss=1.5845 | top1=0.5229 | top3=0.7648 | top5=0.8451 | top10=0.9307
+  Saved new best model to: gomoku_cnn.pt
+Epoch 06/20 | lr=0.001000 | train loss=1.5150 | train top1=0.5355 | val loss=1.4988 | top1=0.5320 | top3=0.7925 | top5=0.8628 | top10=0.9374
+  Saved new best model to: gomoku_cnn.pt
+Epoch 07/20 | lr=0.001000 | train loss=1.4717 | train top1=0.5471 | val loss=1.5171 | top1=0.5339 | top3=0.7887 | top5=0.8690 | top10=0.9417
+  Saved new best model to: gomoku_cnn.pt
+Epoch 08/20 | lr=0.001000 | train loss=1.4255 | train top1=0.5565 | val loss=1.4560 | top1=0.5502 | top3=0.7983 | top5=0.8652 | top10=0.9426
+  Saved new best model to: gomoku_cnn.pt
+Epoch 09/20 | lr=0.001000 | train loss=1.3949 | train top1=0.5671 | val loss=1.4367 | top1=0.5578 | top3=0.8002 | top5=0.8685 | top10=0.9446
+  Saved new best model to: gomoku_cnn.pt
+Epoch 10/20 | lr=0.001000 | train loss=1.3513 | train top1=0.5808 | val loss=1.4098 | top1=0.5688 | top3=0.8026 | top5=0.8733 | top10=0.9426
+  Saved new best model to: gomoku_cnn.pt
+Epoch 11/20 | lr=0.001000 | train loss=1.3314 | train top1=0.5829 | val loss=1.5101 | top1=0.5421 | top3=0.7825 | top5=0.8518 | top10=0.9369
+Epoch 12/20 | lr=0.001000 | train loss=1.3040 | train top1=0.5932 | val loss=1.3741 | top1=0.5789 | top3=0.8016 | top5=0.8705 | top10=0.9512
+  Saved new best model to: gomoku_cnn.pt
+Epoch 13/20 | lr=0.001000 | train loss=1.2758 | train top1=0.6072 | val loss=1.3715 | top1=0.5837 | top3=0.8059 | top5=0.8685 | top10=0.9422
+  Saved new best model to: gomoku_cnn.pt
+Epoch 14/20 | lr=0.001000 | train loss=1.2578 | train top1=0.6081 | val loss=1.3777 | top1=0.5707 | top3=0.7978 | top5=0.8705 | top10=0.9484
+Epoch 15/20 | lr=0.001000 | train loss=1.2177 | train top1=0.6221 | val loss=1.3326 | top1=0.5817 | top3=0.8188 | top5=0.8810 | top10=0.9460
+Epoch 16/20 | lr=0.001000 | train loss=1.2209 | train top1=0.6207 | val loss=1.3844 | top1=0.5736 | top3=0.8155 | top5=0.8786 | top10=0.9450
+Epoch 17/20 | lr=0.001000 | train loss=1.1998 | train top1=0.6263 | val loss=1.3199 | top1=0.5985 | top3=0.8112 | top5=0.8757 | top10=0.9489
+  Saved new best model to: gomoku_cnn.pt
+Epoch 18/20 | lr=0.001000 | train loss=1.1884 | train top1=0.6260 | val loss=1.3467 | top1=0.6028 | top3=0.8078 | top5=0.8738 | top10=0.9474
+  Saved new best model to: gomoku_cnn.pt
+Epoch 19/20 | lr=0.001000 | train loss=1.1651 | train top1=0.6386 | val loss=1.3097 | top1=0.6133 | top3=0.8141 | top5=0.8767 | top10=0.9446
+  Saved new best model to: gomoku_cnn.pt
+Epoch 20/20 | lr=0.001000 | train loss=1.1519 | train top1=0.6414 | val loss=1.2905 | top1=0.6099 | top3=0.8145 | top5=0.8838 | top10=0.9517
+
+Training finished.
+Best validation Top-1 accuracy: 0.6133
+Loading best checkpoint for final test evaluation...
+Final test loss=1.3675 | top1=0.5854 | top3=0.8078 | top5=0.8817 | top10=0.9437
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+(base) PS D:\CMPT310-G18\training> python train_cnn.py --epochs 10
+Device: cuda
+Loading training data...
+Warning: train contains 6 invalid samples whose target square is occupied. These samples will be skipped.
+Loading test data...
+Warning: test contains 3 invalid samples whose target square is occupied. These samples will be skipped.
+Training samples: 18823
+Validation samples: 2092
+Test samples: 5454
+Trainable parameters: 373,345
+Data augmentation: enabled
+Epoch 01/10 | lr=0.001000 | train loss=2.4931 | train top1=0.3162 | val loss=2.0581 | top1=0.3877 | top3=0.6716 | top5=0.7796 | top10=0.8972
+  Saved new best model to: gomoku_cnn.pt
+Epoch 02/10 | lr=0.001000 | train loss=1.8821 | train top1=0.4368 | val loss=1.8475 | top1=0.4479 | top3=0.7146 | top5=0.8169 | top10=0.9183
+  Saved new best model to: gomoku_cnn.pt
+Epoch 03/10 | lr=0.001000 | train loss=1.7281 | train top1=0.4769 | val loss=1.7757 | top1=0.4541 | top3=0.7457 | top5=0.8427 | top10=0.9264
+  Saved new best model to: gomoku_cnn.pt
+Epoch 04/10 | lr=0.001000 | train loss=1.6241 | train top1=0.5040 | val loss=1.6503 | top1=0.4976 | top3=0.7620 | top5=0.8475 | top10=0.9379
+  Saved new best model to: gomoku_cnn.pt
+Epoch 05/10 | lr=0.001000 | train loss=1.5649 | train top1=0.5166 | val loss=1.5845 | top1=0.5229 | top3=0.7648 | top5=0.8451 | top10=0.9307
+  Saved new best model to: gomoku_cnn.pt
+Epoch 06/10 | lr=0.001000 | train loss=1.5150 | train top1=0.5355 | val loss=1.4988 | top1=0.5320 | top3=0.7925 | top5=0.8628 | top10=0.9374
+  Saved new best model to: gomoku_cnn.pt
+Epoch 07/10 | lr=0.001000 | train loss=1.4717 | train top1=0.5471 | val loss=1.5171 | top1=0.5339 | top3=0.7887 | top5=0.8690 | top10=0.9417
+  Saved new best model to: gomoku_cnn.pt
+Epoch 08/10 | lr=0.001000 | train loss=1.4255 | train top1=0.5565 | val loss=1.4560 | top1=0.5502 | top3=0.7983 | top5=0.8652 | top10=0.9426
+  Saved new best model to: gomoku_cnn.pt
+Epoch 09/10 | lr=0.001000 | train loss=1.3949 | train top1=0.5671 | val loss=1.4367 | top1=0.5578 | top3=0.8002 | top5=0.8685 | top10=0.9446
+  Saved new best model to: gomoku_cnn.pt
+Epoch 10/10 | lr=0.001000 | train loss=1.3513 | train top1=0.5808 | val loss=1.4098 | top1=0.5688 | top3=0.8026 | top5=0.8733 | top10=0.9426
+  Saved new best model to: gomoku_cnn.pt
+
+Training finished.
+Best validation Top-1 accuracy: 0.5688
+Loading best checkpoint for final test evaluation...
+Final test loss=1.4793 | top1=0.5482 | top3=0.7943 | top5=0.8717 | top10=0.9411
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+(base) PS D:\CMPT310-G18\training> python train_cnn.py --epochs 40
+Device: cuda
+Loading training data...
+Warning: train contains 6 invalid samples whose target square is occupied. These samples will be skipped.
+Loading test data...
+Warning: test contains 3 invalid samples whose target square is occupied. These samples will be skipped.
+Training samples: 18823
+Validation samples: 2092
+Test samples: 5454
+Trainable parameters: 373,345
+Data augmentation: enabled
+Epoch 01/40 | lr=0.001000 | train loss=2.4931 | train top1=0.3162 | val loss=2.0581 | top1=0.3877 | top3=0.6716 | top5=0.7796 | top10=0.8972
+  Saved new best model to: gomoku_cnn.pt
+Epoch 02/40 | lr=0.001000 | train loss=1.8821 | train top1=0.4368 | val loss=1.8475 | top1=0.4479 | top3=0.7146 | top5=0.8169 | top10=0.9183
+  Saved new best model to: gomoku_cnn.pt
+Epoch 03/40 | lr=0.001000 | train loss=1.7281 | train top1=0.4769 | val loss=1.7757 | top1=0.4541 | top3=0.7457 | top5=0.8427 | top10=0.9264
+  Saved new best model to: gomoku_cnn.pt
+Epoch 04/40 | lr=0.001000 | train loss=1.6241 | train top1=0.5040 | val loss=1.6503 | top1=0.4976 | top3=0.7620 | top5=0.8475 | top10=0.9379
+  Saved new best model to: gomoku_cnn.pt
+Epoch 05/40 | lr=0.001000 | train loss=1.5649 | train top1=0.5166 | val loss=1.5845 | top1=0.5229 | top3=0.7648 | top5=0.8451 | top10=0.9307
+  Saved new best model to: gomoku_cnn.pt
+Epoch 06/40 | lr=0.001000 | train loss=1.5150 | train top1=0.5355 | val loss=1.4988 | top1=0.5320 | top3=0.7925 | top5=0.8628 | top10=0.9374
+  Saved new best model to: gomoku_cnn.pt
+Epoch 07/40 | lr=0.001000 | train loss=1.4717 | train top1=0.5471 | val loss=1.5171 | top1=0.5339 | top3=0.7887 | top5=0.8690 | top10=0.9417
+  Saved new best model to: gomoku_cnn.pt
+Epoch 08/40 | lr=0.001000 | train loss=1.4255 | train top1=0.5565 | val loss=1.4560 | top1=0.5502 | top3=0.7983 | top5=0.8652 | top10=0.9426
+  Saved new best model to: gomoku_cnn.pt
+Epoch 09/40 | lr=0.001000 | train loss=1.3949 | train top1=0.5671 | val loss=1.4367 | top1=0.5578 | top3=0.8002 | top5=0.8685 | top10=0.9446
+  Saved new best model to: gomoku_cnn.pt
+Epoch 10/40 | lr=0.001000 | train loss=1.3513 | train top1=0.5808 | val loss=1.4098 | top1=0.5688 | top3=0.8026 | top5=0.8733 | top10=0.9426
+  Saved new best model to: gomoku_cnn.pt
+Epoch 11/40 | lr=0.001000 | train loss=1.3314 | train top1=0.5829 | val loss=1.5101 | top1=0.5421 | top3=0.7825 | top5=0.8518 | top10=0.9369
+Epoch 12/40 | lr=0.001000 | train loss=1.3040 | train top1=0.5932 | val loss=1.3741 | top1=0.5789 | top3=0.8016 | top5=0.8705 | top10=0.9512
+  Saved new best model to: gomoku_cnn.pt
+Epoch 13/40 | lr=0.001000 | train loss=1.2758 | train top1=0.6072 | val loss=1.3715 | top1=0.5837 | top3=0.8059 | top5=0.8685 | top10=0.9422
+  Saved new best model to: gomoku_cnn.pt
+Epoch 14/40 | lr=0.001000 | train loss=1.2578 | train top1=0.6081 | val loss=1.3777 | top1=0.5707 | top3=0.7978 | top5=0.8705 | top10=0.9484
+Epoch 15/40 | lr=0.001000 | train loss=1.2177 | train top1=0.6221 | val loss=1.3326 | top1=0.5817 | top3=0.8188 | top5=0.8810 | top10=0.9460
+Epoch 16/40 | lr=0.001000 | train loss=1.2209 | train top1=0.6207 | val loss=1.3844 | top1=0.5736 | top3=0.8155 | top5=0.8786 | top10=0.9450
+Epoch 17/40 | lr=0.001000 | train loss=1.1998 | train top1=0.6263 | val loss=1.3199 | top1=0.5985 | top3=0.8112 | top5=0.8757 | top10=0.9489
+  Saved new best model to: gomoku_cnn.pt
+Epoch 18/40 | lr=0.001000 | train loss=1.1884 | train top1=0.6260 | val loss=1.3467 | top1=0.6028 | top3=0.8078 | top5=0.8738 | top10=0.9474
+  Saved new best model to: gomoku_cnn.pt
+Epoch 19/40 | lr=0.001000 | train loss=1.1651 | train top1=0.6386 | val loss=1.3097 | top1=0.6133 | top3=0.8141 | top5=0.8767 | top10=0.9446
+  Saved new best model to: gomoku_cnn.pt
+Epoch 20/40 | lr=0.001000 | train loss=1.1519 | train top1=0.6414 | val loss=1.2905 | top1=0.6099 | top3=0.8145 | top5=0.8838 | top10=0.9517
+Epoch 21/40 | lr=0.001000 | train loss=1.1331 | train top1=0.6431 | val loss=1.3266 | top1=0.6013 | top3=0.8059 | top5=0.8724 | top10=0.9465
+Epoch 22/40 | lr=0.001000 | train loss=1.1210 | train top1=0.6469 | val loss=1.2893 | top1=0.6018 | top3=0.8102 | top5=0.8748 | top10=0.9512
+Epoch 23/40 | lr=0.001000 | train loss=1.1103 | train top1=0.6532 | val loss=1.3413 | top1=0.5989 | top3=0.8040 | top5=0.8709 | top10=0.9450
+Epoch 24/40 | lr=0.001000 | train loss=1.0941 | train top1=0.6577 | val loss=1.2071 | top1=0.6372 | top3=0.8394 | top5=0.8905 | top10=0.9503
+  Saved new best model to: gomoku_cnn.pt
+Epoch 25/40 | lr=0.001000 | train loss=1.0805 | train top1=0.6615 | val loss=1.2047 | top1=0.6319 | top3=0.8207 | top5=0.8910 | top10=0.9484
+Epoch 26/40 | lr=0.001000 | train loss=1.0730 | train top1=0.6648 | val loss=1.2312 | top1=0.6185 | top3=0.8255 | top5=0.8872 | top10=0.9493
+Epoch 27/40 | lr=0.001000 | train loss=1.0560 | train top1=0.6684 | val loss=1.2117 | top1=0.6353 | top3=0.8322 | top5=0.8924 | top10=0.9489
+Epoch 28/40 | lr=0.000500 | train loss=1.0469 | train top1=0.6721 | val loss=1.2507 | top1=0.6200 | top3=0.8293 | top5=0.8815 | top10=0.9512
+Epoch 29/40 | lr=0.000500 | train loss=0.9566 | train top1=0.6996 | val loss=1.1603 | top1=0.6458 | top3=0.8427 | top5=0.8910 | top10=0.9498
+  Saved new best model to: gomoku_cnn.pt
+Epoch 30/40 | lr=0.000500 | train loss=0.9311 | train top1=0.7040 | val loss=1.1584 | top1=0.6587 | top3=0.8384 | top5=0.8924 | top10=0.9503
+  Saved new best model to: gomoku_cnn.pt
+Epoch 31/40 | lr=0.000500 | train loss=0.9235 | train top1=0.7100 | val loss=1.1234 | top1=0.6625 | top3=0.8513 | top5=0.9030 | top10=0.9517
+  Saved new best model to: gomoku_cnn.pt
+Epoch 32/40 | lr=0.000500 | train loss=0.8968 | train top1=0.7204 | val loss=1.1456 | top1=0.6597 | top3=0.8394 | top5=0.8958 | top10=0.9489
+Epoch 33/40 | lr=0.000500 | train loss=0.8957 | train top1=0.7168 | val loss=1.1120 | top1=0.6659 | top3=0.8399 | top5=0.8991 | top10=0.9512
+  Saved new best model to: gomoku_cnn.pt
+Epoch 34/40 | lr=0.000500 | train loss=0.8856 | train top1=0.7210 | val loss=1.1271 | top1=0.6692 | top3=0.8466 | top5=0.8944 | top10=0.9517
+  Saved new best model to: gomoku_cnn.pt
+Epoch 35/40 | lr=0.000500 | train loss=0.8740 | train top1=0.7230 | val loss=1.1297 | top1=0.6640 | top3=0.8437 | top5=0.8891 | top10=0.9450
+Epoch 36/40 | lr=0.000250 | train loss=0.8646 | train top1=0.7237 | val loss=1.1488 | top1=0.6496 | top3=0.8489 | top5=0.8944 | top10=0.9450
+Epoch 37/40 | lr=0.000250 | train loss=0.8218 | train top1=0.7400 | val loss=1.1172 | top1=0.6716 | top3=0.8523 | top5=0.8963 | top10=0.9493
+  Saved new best model to: gomoku_cnn.pt
+Epoch 38/40 | lr=0.000250 | train loss=0.7974 | train top1=0.7457 | val loss=1.0951 | top1=0.6816 | top3=0.8566 | top5=0.9030 | top10=0.9498
+  Saved new best model to: gomoku_cnn.pt
+Epoch 39/40 | lr=0.000250 | train loss=0.7815 | train top1=0.7524 | val loss=1.1400 | top1=0.6625 | top3=0.8494 | top5=0.8958 | top10=0.9450
+Epoch 40/40 | lr=0.000250 | train loss=0.7802 | train top1=0.7522 | val loss=1.1328 | top1=0.6773 | top3=0.8389 | top5=0.8963 | top10=0.9517
+
+Training finished.
+Best validation Top-1 accuracy: 0.6816
+Loading best checkpoint for final test evaluation...
+Final test loss=1.2413 | top1=0.6503 | top3=0.8357 | top5=0.8871 | top10=0.9463
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
