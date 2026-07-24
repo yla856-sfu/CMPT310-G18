@@ -1,6 +1,6 @@
 # CMPT310-G18
 
-Testing branch
+Main branch
 
 ## Run
 
