@@ -1,5 +1,5 @@
 import pygame
-import game
+from game import game
 
 CELL_SIZE = 40
 
@@ -12,7 +12,6 @@ WINDOW_WIDTH = 850
 WINDOW_HEIGHT = 700
 
 INFO_LEFT = 640
-
 
 RESTART_BUTTON_X = 640
 RESTART_BUTTON_Y = 500
@@ -46,6 +45,7 @@ def screen_to_board(mouse_x, mouse_y):
     return None, None
 
 
+# Draw the board grid, axis labels, and all placed stones for the current game state.
 def draw_board(screen, font):
     screen.fill((230, 190, 120))
 
@@ -90,6 +90,7 @@ def draw_board(screen, font):
                 pygame.draw.circle(screen, (0, 0, 0), (screen_x, screen_y), 16, 1)
 
 
+# Draw the sidebar: game title, player/AI/turn info, and the wrapped status message.
 def draw_info(screen, font, big_font, message, turn_count, ai_type):
     title = big_font.render("Gomoku", True, (0, 0, 0))
     screen.blit(title, (INFO_LEFT, 60))
@@ -117,27 +118,63 @@ def draw_info(screen, font, big_font, message, turn_count, ai_type):
         screen.blit(text, (INFO_LEFT, y))
         y += 28
 
+# Word-wrap text into lines no longer than max_length so long messages fit in the
+# sidebar without overflowing, without breaking words mid-way.
 def split_message(text, max_length):
     lines = []
 
     for part in text.split("\n"):
         current = ""
 
-        for char in part:
-            current += char
+        for word in part.split(" "):
+            if current == "":
+                candidate = word
+            else:
+                candidate = current + " " + word
 
-            if len(current) >= max_length:
+            if len(candidate) > max_length and current != "":
                 lines.append(current)
-                current = ""
+                current = word
+            else:
+                current = candidate
 
         if current != "":
             lines.append(current)
 
     return lines
 
+# Show the AI-selection menu and block until the user clicks a button, returning its AI type.
 def choose_ai(screen, font, big_font):
-    random_button = pygame.Rect(250, 250, 350, 60)
-    greedy_button = pygame.Rect(250, 340, 350, 60)
+    menu_button_width = 600
+    menu_left = (WINDOW_WIDTH - menu_button_width) // 2
+
+    button_height = 60
+    row_gap = 25
+    menu_top = 160
+
+    row_button_gap = 12
+    mini_button_width = (menu_button_width - 3 * row_button_gap) / 4
+
+    row0_y = menu_top
+    row1_y = row0_y + button_height + row_gap
+    row2_y = row1_y + button_height + row_gap
+    row3_y = row2_y + button_height + row_gap
+    row4_y = row3_y + button_height + row_gap
+
+    random_button = pygame.Rect(menu_left, row0_y, menu_button_width, button_height)
+    greedy_button = pygame.Rect(menu_left, row1_y, menu_button_width, button_height)
+
+    minimax1_button = pygame.Rect(menu_left, row2_y, mini_button_width, button_height)
+    minimax2_button = pygame.Rect(menu_left+(mini_button_width+row_button_gap), row2_y, mini_button_width, button_height)
+    minimax3_button = pygame.Rect(menu_left+(mini_button_width+row_button_gap)*2, row2_y, mini_button_width, button_height)
+    minimax4_button = pygame.Rect(menu_left+(mini_button_width+row_button_gap)*3, row2_y, mini_button_width, button_height)
+
+    cnn_button = pygame.Rect(menu_left, row3_y, menu_button_width, button_height)
+
+    cnnminimax1_button = pygame.Rect(menu_left, row4_y, mini_button_width, button_height)
+    cnnminimax2_button = pygame.Rect(menu_left+(mini_button_width+row_button_gap), row4_y, mini_button_width, button_height)
+    cnnminimax3_button = pygame.Rect(menu_left+(mini_button_width+row_button_gap)*2, row4_y, mini_button_width, button_height)
+    cnnminimax4_button = pygame.Rect(menu_left+(mini_button_width+row_button_gap)*3, row4_y, mini_button_width, button_height)
 
     while True:
         screen.fill((230, 190, 120))
@@ -146,20 +183,32 @@ def choose_ai(screen, font, big_font):
         title_rect = title.get_rect(center=(WINDOW_WIDTH // 2, 80))
         screen.blit(title, title_rect)
 
-        pygame.draw.rect(screen, (200, 200, 200), random_button)
-        pygame.draw.rect(screen, (0, 0, 0), random_button, 2)
+        # Each entry pairs a button Rect with its display label and the AI type it selects.
+        buttons = [
+            [random_button, "Random AI", "random"],
+            [greedy_button, "Greedy AI", "greedy"],
+            [minimax1_button, "Minimax D1", "minimax1"],
+            [minimax2_button, "Minimax D2", "minimax2"],
+            [minimax3_button, "Minimax D3", "minimax3"],
+            [minimax4_button, "Minimax D4", "minimax4"],
+            [cnn_button, "CNN AI", "cnn"],
+            [cnnminimax1_button, "CNN+MM D1", "cnnminimax1"],
+            [cnnminimax2_button, "CNN+MM D2", "cnnminimax2"],
+            [cnnminimax3_button, "CNN+MM D3", "cnnminimax3"],
+            [cnnminimax4_button, "CNN+MM D4", "cnnminimax4"]
+        ]
 
-        pygame.draw.rect(screen, (200, 200, 200), greedy_button)
-        pygame.draw.rect(screen, (0, 0, 0), greedy_button, 2)
+        for item in buttons:
+            button = item[0]
+            label = item[1]
 
-        text1 = font.render("Random AI", True, (0, 0, 0))
-        text1_rect = text1.get_rect(center=random_button.center)
+            pygame.draw.rect(screen, (200, 200, 200), button)
+            pygame.draw.rect(screen, (0, 0, 0), button, 2)
 
-        text2 = font.render("Greedy AI", True, (0, 0, 0))
-        text2_rect = text2.get_rect(center=greedy_button.center)
+            text = font.render(label, True, (0, 0, 0))
+            text_rect = text.get_rect(center=button.center)
 
-        screen.blit(text1, text1_rect)
-        screen.blit(text2, text2_rect)
+            screen.blit(text, text_rect)
 
         pygame.display.update()
 
@@ -171,12 +220,14 @@ def choose_ai(screen, font, big_font):
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_x, mouse_y = pygame.mouse.get_pos()
 
-                if random_button.collidepoint(mouse_x, mouse_y):
-                    return "random"
+                for item in buttons:
+                    button = item[0]
+                    ai_type = item[2]
 
-                if greedy_button.collidepoint(mouse_x, mouse_y):
-                    return "greedy"
-                
+                    if button.collidepoint(mouse_x, mouse_y):
+                        return ai_type
+
+# Draw the "Restart" button in the sidebar.
 def draw_restart_button(screen, font):
     button_rect = pygame.Rect(
         RESTART_BUTTON_X,
@@ -189,12 +240,11 @@ def draw_restart_button(screen, font):
     pygame.draw.rect(screen, (0, 0, 0), button_rect, 2)
 
     text = font.render("Restart", True, (0, 0, 0))
+    text_rect = text.get_rect(center=button_rect.center)
 
-    text_x = RESTART_BUTTON_X + 25
-    text_y = RESTART_BUTTON_Y + 12
+    screen.blit(text, text_rect)
 
-    screen.blit(text, (text_x, text_y))
-
+# Check whether a mouse click restart button.
 def click_restart_button(mouse_x, mouse_y):
     if mouse_x >= RESTART_BUTTON_X and mouse_x <= RESTART_BUTTON_X + RESTART_BUTTON_WIDTH:
         if mouse_y >= RESTART_BUTTON_Y and mouse_y <= RESTART_BUTTON_Y + RESTART_BUTTON_HEIGHT:
