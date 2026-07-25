@@ -8,6 +8,8 @@ from torch import nn
 
 from game.board import SIZE, EMPTY, board
 
+torch.set_num_threads(1)
+
 # Checkpoint saved under training/. Load CNN models with different parameters by renaming gomoku_cnn.pt.
 _CHECKPOINT_PATH = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
