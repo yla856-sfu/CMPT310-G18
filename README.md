@@ -20,7 +20,8 @@ python main.py
 
 The player plays against an AI in the pygame GUI.  
 The player can choose AI type before the game starts.  
-The player can click restart button to restart game when game is end.
+The player can click restart button to restart game when game is end.  
+![GUI](https://i.ibb.co/ynSjN6Ny/GUI.png)  
 
 ## AI VS AI
 
