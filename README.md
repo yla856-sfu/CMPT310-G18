@@ -46,4 +46,19 @@ Example 2:
 python TEST.py greedy greedy 1 true 1
 ```
 
-Run greedy AI against greedy AI for 1 game, show each move, and wait 1 second between moves.
+Run greedy AI against greedy AI for 1 game, show each move, and wait 1 second between moves.  
+
+Or you can run AI testing with multiprocessing, but this will disable [WATCH_PROCESS] and log.txt save:
+
+```bash
+python TEST_mp.py AI_TYPE_1 AI_TYPE_2 TEST_TIMES [WORKERS]
+```
+
+Example 1:
+
+```bash
+python TEST.py random greedy 100 4
+```
+
+Run random AI against greedy AI for 100 games with 4 processing.
+
