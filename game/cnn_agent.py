@@ -8,11 +8,23 @@ from torch import nn
 
 from game.board import SIZE, EMPTY, board
 
+torch.set_num_threads(1)
+
 # Checkpoint saved under training/. Load CNN models with different parameters by renaming gomoku_cnn.pt.
 _CHECKPOINT_PATH = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     "training",
-    "gomoku_cnn_default.pt", # <- Rename this.
+     "gomoku_cnn_default.pt",   # <- Active checkpoint. Swap by uncommenting one below.
+    # "gomoku_cnn_epoch_10.pt",
+    # "gomoku_cnn_epoch_40.pt",
+    # "gomoku_cnn_batch_64",
+    # "gomoku_cnn_batch_256",
+    # "gomoku_cnn_lr_5e-4",
+    # "gomoku_cnn_lr_2e-3",
+    # "gomoku_cnn_channel_32",
+    # "gomoku_cnn_channel_128",
+    # "gomoku_cnn_block_2",
+    # "gomoku_cnn_block_10",
 )
 
 # Cached model instance so the checkpoint is only loaded from disk once.

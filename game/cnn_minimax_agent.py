@@ -4,9 +4,9 @@
 import random
 
 from game.board import board, EMPTY, get_possible_moves, check_win, board_full
-from game.evaluation import evaluate_board_static, evaluate_candidate_move
+from game.evaluation import evaluate_board_static
 from game.greedy_agent import find_winning_move, find_blocking_move
-from game.cnn_agent import policy_scores
+from game.cnn_agent import policy_scores, cnn_algorithm
 
 # Evaluate the current board from the player's perspective.
 # A positive score means the position favors the player.
@@ -122,7 +122,11 @@ def cnn_minimax_algorithm(player, opponent, depth):
         board[y][x] = player
         return x, y
 
-    # 3. Otherwise search ahead, using the CNN's policy scores to order candidate moves.
+    # 3. At depth 1 there is no search to do, so just defer to the CNN's own move choice.
+    if depth == 1:
+        return cnn_algorithm(player, opponent)
+
+    # 4. Otherwise search ahead, using the CNN's policy scores to order candidate moves.
     possible_moves = get_cnn_ordered_moves(player, 40)
 
     best_moves = []
@@ -134,13 +138,9 @@ def cnn_minimax_algorithm(player, opponent, depth):
 
         board[y][x] = player
 
-        # At depth 1, evaluate the candidate directly instead of starting a deeper search.
-        if depth == 1:
-            score = evaluate_candidate_move(x, y, player, opponent)
-        else:
-            # Scores are integers. Use best_score - 1 as alpha so branches equal to
-            # the current best score are fully checked and can be recorded as ties.
-            score = minimax_search(depth - 1, False, player, opponent, best_score - 1, 1000000000)
+        # Scores are integers. Use best_score - 1 as alpha so branches equal to
+        # the current best score are fully checked and can be recorded as ties.
+        score = minimax_search(depth - 1, False, player, opponent, best_score - 1, 1000000000)
 
         board[y][x] = EMPTY
 
