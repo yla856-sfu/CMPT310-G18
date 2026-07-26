@@ -55,10 +55,10 @@ Run greedy AI against greedy AI for 1 game, show each move, and wait 1 second be
 python TEST_mp.py AI_TYPE_1 AI_TYPE_2 TEST_TIMES [WORKERS]
 ```
 
-Example 1:
+Example:
 
 ```bash
-python TEST.py random greedy 100 4
+python TEST_mp.py random greedy 100 4
 ```
 
 Run random AI against greedy AI for 100 games with 4 processing.
