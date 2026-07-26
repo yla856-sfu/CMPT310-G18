@@ -61,4 +61,4 @@ Example:
 python TEST_mp.py random greedy 100 4
 ```
 
-Run random AI against greedy AI for 100 games with 4 processing.
+Run random AI against greedy AI for 100 games with 4 worker processes.
