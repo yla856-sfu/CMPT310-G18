@@ -26,7 +26,7 @@ The player can click restart button to restart game when game is end.
 
 ## AI VS AI
 
-Run AI testing:
+### Run AI testing:
 
 ```bash
 python TEST.py AI_TYPE_1 AI_TYPE_2 TEST_TIMES WATCH_PROCESS [INTERVAL_SECONDS]
@@ -47,8 +47,8 @@ python TEST.py greedy greedy 1 true 1
 ```
 
 Run greedy AI against greedy AI for 1 game, show each move, and wait 1 second between moves.  
-
-Or you can run AI testing with multiprocessing, but this will disable [WATCH_PROCESS] and log.txt save:
+  
+### Or you can run AI testing with multiprocessing, but this will disable [WATCH_PROCESS] and log.txt save:
 
 ```bash
 python TEST_mp.py AI_TYPE_1 AI_TYPE_2 TEST_TIMES [WORKERS]
