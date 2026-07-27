@@ -9,6 +9,7 @@ import sys
 import time
 from multiprocessing import Pool
 from game import game
+import signal
 
 # Enable ANSI escape sequence processing on Windows consoles. (For display colors in consoles)
 if os.name == "nt":
@@ -190,6 +191,9 @@ def run_single_game(game_number, ai_type_1, ai_type_2):
 def run_single_game_star(args):
     return run_single_game(*args)
 
+def init_worker():
+    signal.signal(signal.SIGINT, signal.SIG_IGN)
+
 # Run the AI comparison test and summarize the results.
 def main():
     ai_type_1, ai_type_2, test_times, workers = parse_args()
@@ -214,7 +218,7 @@ def main():
         for game_number in range(1, test_times + 1)
     ]
 
-    with Pool(processes=workers) as pool:
+    with Pool(processes=workers, initializer=init_worker) as pool:
         try:
             for (result, turns, moves, elapsed,
                  ai1_think_time, ai1_move_count, ai2_think_time, ai2_move_count) in pool.imap_unordered(
@@ -243,6 +247,7 @@ def main():
         except KeyboardInterrupt:
             print("\nCtrl+C interrupt detected")
             pool.terminate()
+            pool.join()
             return
 
     print()
