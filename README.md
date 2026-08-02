@@ -48,7 +48,7 @@ python TEST.py greedy greedy 1 true 1
 
 Run greedy AI against greedy AI for 1 game, show each move, and wait 1 second between moves.    
 
-———————————————————————————————————————————————————————————————  
+————————————————————
 ### Or you can run AI testing with multiprocessing, 
 ### But this will disable [WATCH_PROCESS] and log:
 
