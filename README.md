@@ -4,7 +4,7 @@ Main branch
 
 ## Run
 
-Install pygame:
+Install requirements:
 
 ```bash
 pip install -r requirements.txt
