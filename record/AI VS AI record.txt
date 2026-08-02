@@ -55,7 +55,20 @@ Total wall-clock time: 119.4144 seconds
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 4. minimax1 vs minimax4
-
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax1 minimax4 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:33:01 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax1
+Wins: 193 (19.30%) | Losses: 485 (48.50%) | Draws: 322 (32.20%)
+AI 2: minimax4
+Wins: 485 (48.50%) | Losses: 193 (19.30%) | Draws: 322 (32.20%)
+Average turns: 53.39
+Average moves: 105.92
+AI 1 average think time per move: 0.0023 seconds
+AI 2 average think time per move: 1.1518 seconds
+Average time per game (CPU time): 61.1230 seconds
+Total wall-clock time: 1983.9127 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -114,10 +127,38 @@ Total wall-clock time: 490.5657 seconds
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 8. minimax1 vs cnnminimax3
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax1 cnnminimax3 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:10:00 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax1
+Wins: 318 (31.80%) | Losses: 665 (66.50%) | Draws: 17 (1.70%)
+AI 2: cnnminimax3
+Wins: 665 (66.50%) | Losses: 318 (31.80%) | Draws: 17 (1.70%)
+Average turns: 24.15
+Average moves: 47.47
+AI 1 average think time per move: 0.0018 seconds
+AI 2 average think time per move: 0.7451 seconds
+Average time per game (CPU time): 17.7888 seconds
+Total wall-clock time: 600.6793 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 9. minimax1 vs cnnminimax4
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax1 cnnminimax4 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 01:57:20 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax1
+Wins: 282 (28.20%) | Losses: 490 (49.00%) | Draws: 228 (22.80%)
+AI 2: cnnminimax4
+Wins: 490 (49.00%) | Losses: 282 (28.20%) | Draws: 228 (22.80%)
+Average turns: 43.79
+Average moves: 86.76
+AI 1 average think time per move: 0.0023 seconds
+AI 2 average think time per move: 5.0248 seconds
+Average time per game (CPU time): 218.2273 seconds
+Total wall-clock time: 7041.8715 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -140,11 +181,38 @@ Total wall-clock time: 75.8900 seconds
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 11. minimax2 vs minimax3
-
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax2 minimax3 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:01:11 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax2
+Wins: 454 (45.40%) | Losses: 546 (54.60%) | Draws: 0 (0.00%)
+AI 2: minimax3
+Wins: 546 (54.60%) | Losses: 454 (45.40%) | Draws: 0 (0.00%)
+Average turns: 14.27
+Average moves: 28.00
+AI 1 average think time per move: 0.0294 seconds
+AI 2 average think time per move: 0.1187 seconds
+Average time per game (CPU time): 2.0746 seconds
+Total wall-clock time: 72.0646 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 12. minimax2 vs minimax4
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax2 minimax4 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:13:37 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax2
+Wins: 143 (14.30%) | Losses: 795 (79.50%) | Draws: 62 (6.20%)
+AI 2: minimax4
+Wins: 795 (79.50%) | Losses: 143 (14.30%) | Draws: 62 (6.20%)
+Average turns: 25.36
+Average moves: 50.16
+AI 1 average think time per move: 0.0476 seconds
+AI 2 average think time per move: 0.8859 seconds
+Average time per game (CPU time): 23.5470 seconds
+Total wall-clock time: 817.6570 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -221,6 +289,20 @@ Total wall-clock time: 400.2629 seconds
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 17. minimax2 vs cnnminimax4
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax2 cnnminimax4 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 01:03:41 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax2
+Wins: 314 (31.40%) | Losses: 662 (66.20%) | Draws: 24 (2.40%)
+AI 2: cnnminimax4
+Wins: 662 (66.20%) | Losses: 314 (31.40%) | Draws: 24 (2.40%)
+Average turns: 26.17
+Average moves: 51.72
+AI 1 average think time per move: 0.0470 seconds
+AI 2 average think time per move: 4.4162 seconds
+Average time per game (CPU time): 115.8065 seconds
+Total wall-clock time: 3822.9716 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -243,6 +325,20 @@ Total wall-clock time: 121.1395 seconds
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 19. minimax3 vs minimax4
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax3 minimax4 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:04:10 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax3
+Wins: 156 (15.60%) | Losses: 844 (84.40%) | Draws: 0 (0.00%)
+AI 2: minimax4
+Wins: 844 (84.40%) | Losses: 156 (15.60%) | Draws: 0 (0.00%)
+Average turns: 11.68
+Average moves: 22.80
+AI 1 average think time per move: 0.1247 seconds
+AI 2 average think time per move: 0.5284 seconds
+Average time per game (CPU time): 7.5136 seconds
+Total wall-clock time: 250.7203 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -319,31 +415,128 @@ Total wall-clock time: 199.6816 seconds
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 24. minimax3 vs cnnminimax4
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax3 cnnminimax4 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:18:36 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax3
+Wins: 101 (10.10%) | Losses: 899 (89.90%) | Draws: 0 (0.00%)
+AI 2: cnnminimax4
+Wins: 899 (89.90%) | Losses: 101 (10.10%) | Draws: 0 (0.00%)
+Average turns: 10.68
+Average moves: 20.86
+AI 1 average think time per move: 0.1068 seconds
+AI 2 average think time per move: 3.1799 seconds
+Average time per game (CPU time): 34.8984 seconds
+Total wall-clock time: 1117.3578 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 25. minimax4 vs greedy
-
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax4 greedy 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:32:44 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax4
+Wins: 500 (50.00%) | Losses: 178 (17.80%) | Draws: 322 (32.20%)
+AI 2: greedy
+Wins: 178 (17.80%) | Losses: 500 (50.00%) | Draws: 322 (32.20%)
+Average turns: 53.25
+Average moves: 105.61
+AI 1 average think time per move: 1.1431 seconds
+AI 2 average think time per move: 0.0014 seconds
+Average time per game (CPU time): 60.4558 seconds
+Total wall-clock time: 1966.4040 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 26. minimax4 vs cnn
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax4 cnn 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:06:09 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax4
+Wins: 885 (88.50%) | Losses: 115 (11.50%) | Draws: 0 (0.00%)
+AI 2: cnn
+Wins: 115 (11.50%) | Losses: 885 (88.50%) | Draws: 0 (0.00%)
+Average turns: 18.17
+Average moves: 35.95
+AI 1 average think time per move: 0.5668 seconds
+AI 2 average think time per move: 0.0072 seconds
+Average time per game (CPU time): 10.4250 seconds
+Total wall-clock time: 369.8101 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 27. minimax4 vs cnnminimax1
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax4 cnnminimax1 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:08:07 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax4
+Wins: 876 (87.60%) | Losses: 121 (12.10%) | Draws: 3 (0.30%)
+AI 2: cnnminimax1
+Wins: 121 (12.10%) | Losses: 876 (87.60%) | Draws: 3 (0.30%)
+Average turns: 22.00
+Average moves: 43.62
+AI 1 average think time per move: 0.6492 seconds
+AI 2 average think time per move: 0.0055 seconds
+Average time per game (CPU time): 14.3990 seconds
+Total wall-clock time: 487.8116 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 28. minimax4 vs cnnminimax2
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax4 cnnminimax2 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:13:08 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax4
+Wins: 888 (88.80%) | Losses: 85 (8.50%) | Draws: 27 (2.70%)
+AI 2: cnnminimax2
+Wins: 85 (8.50%) | Losses: 888 (88.80%) | Draws: 27 (2.70%)
+Average turns: 21.98
+Average moves: 43.34
+AI 1 average think time per move: 0.8300 seconds
+AI 2 average think time per move: 0.2301 seconds
+Average time per game (CPU time): 23.0899 seconds
+Total wall-clock time: 790.2780 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 29. minimax4 vs cnnminimax3
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax4 cnnminimax3 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:07:06 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax4
+Wins: 862 (86.20%) | Losses: 138 (13.80%) | Draws: 0 (0.00%)
+AI 2: cnnminimax3
+Wins: 138 (13.80%) | Losses: 862 (86.20%) | Draws: 0 (0.00%)
+Average turns: 11.91
+Average moves: 23.19
+AI 1 average think time per move: 0.4974 seconds
+AI 2 average think time per move: 0.6392 seconds
+Average time per game (CPU time): 13.1505 seconds
+Total wall-clock time: 426.8792 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 30. minimax4 vs cnnminimax4
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py minimax4 cnnminimax4 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:43:55 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: minimax4
+Wins: 366 (36.60%) | Losses: 626 (62.60%) | Draws: 8 (0.80%)
+AI 2: cnnminimax4
+Wins: 626 (62.60%) | Losses: 366 (36.60%) | Draws: 8 (0.80%)
+Average turns: 20.10
+Average moves: 39.71
+AI 1 average think time per move: 0.5996 seconds
+AI 2 average think time per move: 3.3818 seconds
+Average time per game (CPU time): 79.2443 seconds
+Total wall-clock time: 2637.5281 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -402,12 +595,38 @@ Total wall-clock time: 98.7818 seconds
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 34. cnn vs cnnminimax3
-
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py cnn cnnminimax3 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:04:17 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: cnn
+Wins: 420 (42.00%) | Losses: 580 (58.00%) | Draws: 0 (0.00%)
+AI 2: cnnminimax3
+Wins: 580 (58.00%) | Losses: 420 (42.00%) | Draws: 0 (0.00%)
+Average turns: 10.62
+Average moves: 20.61
+AI 1 average think time per move: 0.0075 seconds
+AI 2 average think time per move: 0.7594 seconds
+Average time per game (CPU time): 7.9323 seconds
+Total wall-clock time: 257.4933 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 35. cnn vs cnnminimax4
-
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py cnn cnnminimax4 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:36:23 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: cnn
+Wins: 219 (21.90%) | Losses: 781 (78.10%) | Draws: 0 (0.00%)
+AI 2: cnnminimax4
+Wins: 781 (78.10%) | Losses: 219 (21.90%) | Draws: 0 (0.00%)
+Average turns: 18.50
+Average moves: 36.48
+AI 1 average think time per move: 0.0075 seconds
+AI 2 average think time per move: 3.6916 seconds
+Average time per game (CPU time): 67.9924 seconds
+Total wall-clock time: 2185.3552 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -448,10 +667,38 @@ Total wall-clock time: 96.3980 seconds
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 38. cnnminimax1 vs cnnminimax3
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py cnnminimax1 cnnminimax3 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:04:17 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: cnnminimax1
+Wins: 547 (54.70%) | Losses: 453 (45.30%) | Draws: 0 (0.00%)
+AI 2: cnnminimax3
+Wins: 453 (45.30%) | Losses: 547 (54.70%) | Draws: 0 (0.00%)
+Average turns: 11.23
+Average moves: 21.88
+AI 1 average think time per move: 0.0057 seconds
+AI 2 average think time per move: 0.7170 seconds
+Average time per game (CPU time): 7.8891 seconds
+Total wall-clock time: 257.5140 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 39. cnnminimax1 vs cnnminimax4
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py cnnminimax1 cnnminimax4 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:37:37 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: cnnminimax1
+Wins: 250 (25.00%) | Losses: 750 (75.00%) | Draws: 0 (0.00%)
+AI 2: cnnminimax4
+Wins: 750 (75.00%) | Losses: 250 (25.00%) | Draws: 0 (0.00%)
+Average turns: 20.17
+Average moves: 39.85
+AI 1 average think time per move: 0.0058 seconds
+AI 2 average think time per move: 3.4943 seconds
+Average time per game (CPU time): 70.1794 seconds
+Total wall-clock time: 2259.3194 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -474,21 +721,91 @@ Total wall-clock time: 572.3843 seconds
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 41. cnnminimax2 vs cnnminimax3
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py cnnminimax2 cnnminimax3 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:07:11 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: cnnminimax2
+Wins: 293 (29.30%) | Losses: 707 (70.70%) | Draws: 0 (0.00%)
+AI 2: cnnminimax3
+Wins: 707 (70.70%) | Losses: 293 (29.30%) | Draws: 0 (0.00%)
+Average turns: 15.45
+Average moves: 30.10
+AI 1 average think time per move: 0.2126 seconds
+AI 2 average think time per move: 0.6484 seconds
+Average time per game (CPU time): 13.0036 seconds
+Total wall-clock time: 433.0971 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 42. cnnminimax2 vs cnnminimax4
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py cnnminimax2 cnnminimax4 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 01:02:42 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: cnnminimax2
+Wins: 406 (40.60%) | Losses: 571 (57.10%) | Draws: 23 (2.30%)
+AI 2: cnnminimax4
+Wins: 571 (57.10%) | Losses: 406 (40.60%) | Draws: 23 (2.30%)
+Average turns: 26.65
+Average moves: 52.82
+AI 1 average think time per move: 0.2390 seconds
+AI 2 average think time per move: 3.9751 seconds
+Average time per game (CPU time): 111.4579 seconds
+Total wall-clock time: 3764.2034 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 43. cnnminimax3 vs greedy
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py cnnminimax3 greedy 1000 32
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:10:31 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 32
+AI 1: cnnminimax3
+Wins: 661 (66.10%) | Losses: 321 (32.10%) | Draws: 18 (1.80%)
+AI 2: greedy
+Wins: 321 (32.10%) | Losses: 661 (66.10%) | Draws: 18 (1.80%)
+Average turns: 24.70
+Average moves: 48.55
+AI 1 average think time per move: 0.7745 seconds
+AI 2 average think time per move: 0.0012 seconds
+Average time per game (CPU time): 18.8949 seconds
+Total wall-clock time: 631.9831 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 44. cnnminimax3 vs cnnminimax4
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py cnnminimax3 cnnminimax4 1000 16
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 00:23:20 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 16
+AI 1: cnnminimax3
+Wins: 43 (4.30%) | Losses: 957 (95.70%) | Draws: 0 (0.00%)
+AI 2: cnnminimax4
+Wins: 957 (95.70%) | Losses: 43 (4.30%) | Draws: 0 (0.00%)
+Average turns: 10.74
+Average moves: 20.93
+AI 1 average think time per move: 0.3753 seconds
+AI 2 average think time per move: 1.7116 seconds
+Average time per game (CPU time): 22.1463 seconds
+Total wall-clock time: 1400.4436 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 45. cnnminimax4 vs greedy
+(base) PS D:\CMPT310-G18> python .\TEST_mp.py cnnminimax4 greedy 1000 16
+Progress: [##############################] Game 1000/1000 (100.0%) | Elapsed: 02:39:49 | ETA: 00:00:00
+Total games: 1000
+Worker processes: 12
+AI 1: cnnminimax4
+Wins: 488 (48.80%) | Losses: 290 (29.00%) | Draws: 222 (22.20%)
+AI 2: greedy
+Wins: 290 (29.00%) | Losses: 488 (48.80%) | Draws: 222 (22.20%)
+Average turns: 42.18
+Average moves: 83.51
+AI 1 average think time per move: 2.7222 seconds
+AI 2 average think time per move: 0.0009 seconds
+Average time per game (CPU time): 113.7715 seconds
+Total wall-clock time: 9589.5049 seconds
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
