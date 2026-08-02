@@ -10,7 +10,7 @@ Install pytorch:
 pip install -r requirements.txt
 ```
 
-## Training (GUI)
+## Training model
 
 Run the training:
 
