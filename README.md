@@ -1,4 +1,4 @@
-# CMPT310-G18
+# CMPT310 D100 2026 Summer
 
 # Gomoku AI — CMPT 310 Group 18
 
