@@ -69,7 +69,7 @@ CMPT310-G18/
 
 ## Requirements
 
-The project requires Python and the following libraries:
+The project requires Python 3.11/3.12/3.13 (3.14 is not supporting pygame for now) and the following libraries:
 
 * NumPy
 * Pygame
