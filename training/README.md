@@ -15,7 +15,7 @@ The following libraries are required:
 * NumPy
 * PyTorch
 
-Install the required packages from the `training/` directory:
+Install the required packages from the `training/` directory (if you did not install in the root directory):
 
 ```bash
 pip install -r requirements.txt
