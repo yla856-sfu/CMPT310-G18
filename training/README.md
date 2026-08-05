@@ -103,16 +103,5 @@ python train_cnn.py --help
 The following command trains a larger model for 40 epochs and saves it as `gomoku_cnn_custom.pt`:
 
 ```bash
-python train_cnn.py \
-  --data-dir datasets/gomoku_dataset_split \
-  --model-out gomoku_cnn_custom.pt \
-  --epochs 40 \
-  --batch-size 128 \
-  --learning-rate 1e-3 \
-  --weight-decay 1e-4 \
-  --channels 128 \
-  --blocks 10 \
-  --num-workers 0 \
-  --seed 42 \
-  --val-fraction 0.1
+python train_cnn.py --model-out gomoku_cnn_custom.pt --epochs 40 
 ```
