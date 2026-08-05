@@ -8,7 +8,7 @@ The system includes Random, Greedy, Minimax, CNN, and CNN–Minimax hybrid agent
 
 ## Main Features
 
-* Human-vs.-AI gameplay with a graphical interface
+* Human vs. AI gameplay with a graphical interface
 * Legal-move, win, and draw detection
 * 11 selectable AI configurations
 * Minimax search with Alpha–Beta pruning
