@@ -46,7 +46,7 @@ The three files contain:
 * `next_moves_players.npy`: the player making each labeled move with shape `(N,)`
   
 Because the original dataset did not provide a validation set,  
-10% of the cleaned training samples were randomly held out using a fixed random seed by default.
+10% of the cleaned training samples were randomly held out using a fixed random seed and use as validation set by default.
 
 ## Training the Model
 
