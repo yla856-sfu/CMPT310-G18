@@ -44,6 +44,9 @@ The three files contain:
 * `board_states.npy`: Gomoku board states with shape `(N, 15, 15)`
 * `next_moves_coords.npy`: labeled next-move coordinates with shape `(N, 2)`
 * `next_moves_players.npy`: the player making each labeled move with shape `(N,)`
+  
+Because the original dataset did not provide a validation set,  
+10% of the cleaned training samples were randomly held out using a fixed random seed by default.
 
 ## Training the Model
 
