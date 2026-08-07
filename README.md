@@ -4,7 +4,7 @@
 
 This project implements an AI system for Gomoku (Five in a Row) on a 15 × 15 board. It supports Human vs. AI gameplay through a Pygame interface and automated AI vs. AI evaluation through command-line programs.
 
-The system includes Random, Greedy, Minimax, CNN, and CNN–Minimax hybrid agents.  
+The system includes Random, Greedy, Minimax, CNN (Convolutional Neural Networks), and CNN–Minimax hybrid agents.  
 
 ## Team Members
 
